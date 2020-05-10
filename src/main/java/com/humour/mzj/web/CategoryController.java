@@ -30,7 +30,6 @@ public class CategoryController {
     	m.addAttribute("page", page);
         return "listCategory";
     }
-
     /**
      * 	新增商品
      * @param c
