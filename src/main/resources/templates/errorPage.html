@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>系统错误</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript" src="../../webapp/js/jquery.min.js"
+	th:src="@{/js/jquery.min.js}"></script>
+</head>
+<body>
+<div style="width:500px;border:1px solid lightgray;margin:200px auto;padding:80px">
+
+系统 出现了异常，异常原因是：
+    <p th:text="${exception}" ></p>
+    <br></br>
+    出现异常的地址是：
+    <p th:text="${url}"></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>商品编辑</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript" src="../../webapp/js/jquery.min.js"
+	th:src="@{/js/jquery.min.js}"></script>
+</head>
+<body>
+	<div style="margin: 0px auto; width: 500px">
+
+		<form action="../categories/${c.id}" method="POST">
+
+			name: <input name="name" th:value="${c.name}" /> 
+			 <input
+				name="id" type="hidden" th:value="${c.id}" />
+				<input type="hidden" name="_method" value="PUT" />
+			<button type="submit">提交</button>
+
+		</form>
+		</div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.humour.mzj.dao.CategoryDaoMapper">
+<resultMap id="BaseResultMap" type="com.humour.mzj.pojo.Category">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+  </resultMap>
+  <select id="selectAll" resultMap="BaseResultMap">
+  	select id,name from category_
+  </select>
+  
+  <insert id="save" parameterType="com.humour.mzj.pojo.Category">
+  	insert into category_ (id,name) values(#{id},#{name})
+  </insert>
+  
+  <delete id="delete" parameterType="INTEGER">
+  	DELETE FROM category_ WHERE ID=#{id}
+  </delete>
+  
+  <select id="findOne" parameterType="String" resultType="com.humour.mzj.pojo.Category">
+  	select id,name from category_ where id=#{id}
+  </select>
+  
+  <update id="updateC" parameterType="com.humour.mzj.pojo.Category">
+  	update category_ set name =#{name} where id=#{id}
+  </update>
+
+</mapper>
